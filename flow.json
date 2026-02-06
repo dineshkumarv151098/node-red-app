@@ -6,7 +6,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "repeat": "",
+        "repeat": "", 
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
