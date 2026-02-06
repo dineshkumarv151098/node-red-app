@@ -1,0 +1,47 @@
+[
+    {
+        "id": "281e05d.f5f5904",
+        "type": "inject",
+        "name": "Trigger",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [
+                "87c6f05e.1c7b8"
+            ]
+        ]
+    },
+    {
+        "id": "87c6f05e.1c7b8",
+        "type": "function",
+        "name": "Hello World Function",
+        "func": "// Set the message payload to 'Hello World!'\nmsg.payload = \"Hello World!\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 100,
+        "wires": [
+            [
+                "740c02c.43f2e4"
+            ]
+        ]
+    },
+    {
+        "id": "740c02c.43f2e4",
+        "type": "debug",
+        "name": "Debug Output",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 480,
+        "y": 100,
+        "wires": []
+    }
+]
