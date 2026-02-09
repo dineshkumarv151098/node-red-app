@@ -127,5 +127,95 @@
         "x": 500,
         "y": 260,
         "wires": []
+    },
+    {
+        "id": "f6ca07af634c1c1a",
+        "type": "inject",
+        "z": "66fb07a542280215",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "254971d0bdb6dbb4"
+            ]
+        ]
+    },
+    {
+        "id": "254971d0bdb6dbb4",
+        "type": "function",
+        "z": "66fb07a542280215",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "46303a26924d220a"
+            ]
+        ]
+    },
+    {
+        "id": "46303a26924d220a",
+        "type": "switch",
+        "z": "66fb07a542280215",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 360,
+        "wires": [
+            [
+                "31047f588d4526c9"
+            ]
+        ]
+    },
+    {
+        "id": "31047f588d4526c9",
+        "type": "debug",
+        "z": "66fb07a542280215",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 440,
+        "wires": []
     }
 ]
