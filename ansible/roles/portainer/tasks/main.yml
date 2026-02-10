@@ -1,0 +1,6 @@
+- name: Create Portainer namespace
+  shell: kubectl create namespace portainer
+  ignore_errors: yes
+
+- name: Install Portainer
+  shell: kubectl apply -n portainer -f https://downloads.portainer.io/ce2-19/portainer-k8s.yaml

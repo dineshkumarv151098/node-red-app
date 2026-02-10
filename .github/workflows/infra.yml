@@ -1,0 +1,18 @@
+name: Infra Setup
+
+on:
+  push:
+    paths:
+      - 'ansible/**'
+
+jobs:
+  setup:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Ansible
+        run: |
+          cd ansible
+          ansible-playbook site.yml
