@@ -1,7 +1,16 @@
-- name: Create ArgoCD namespace
-  command: kubectl create namespace argocd
+- name: Ensure ArgoCD namespace exists
+  command: kubectl get namespace argocd
+  register: ns_check
   ignore_errors: yes
 
+- name: Create ArgoCD namespace
+  command: kubectl create namespace argocd
+  when: ns_check.rc != 0
+
 - name: Install ArgoCD CRDs
-  command: kubectl create -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+  command: kubectl create -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/crds.yaml
+  ignore_errors: yes
+
+- name: Install ArgoCD Core Components
+  command: kubectl create -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
   ignore_errors: yes
