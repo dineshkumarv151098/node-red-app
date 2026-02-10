@@ -1,6 +1,11 @@
-- name: Create Portainer namespace
-  shell: kubectl create namespace portainer
+- name: Ensure Portainer namespace exists
+  command: kubectl get namespace portainer
+  register: port_ns
   ignore_errors: yes
 
-- name: Install Portainer
-  shell: kubectl apply -n portainer -f https://downloads.portainer.io/ce2-19/portainer-k8s.yaml
+- name: Create Portainer namespace
+  command: kubectl create namespace portainer
+  when: port_ns.rc != 0
+
+- name: Install Portainer (Official Manifest)
+  command: kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer.yaml
