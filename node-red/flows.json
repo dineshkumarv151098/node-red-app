@@ -39,7 +39,7 @@
         "y": 100,
         "wires": [
             [
-                "740c02c.43f2e4"
+                "874bf5798ef82554"
             ]
         ]
     },
@@ -51,7 +51,7 @@
         "active": true,
         "console": "false",
         "complete": "payload",
-        "x": 600,
+        "x": 740,
         "y": 100,
         "wires": []
     },
@@ -251,6 +251,31 @@
         "wires": [
             [
                 "3f992f89ec0a57f9"
+            ]
+        ]
+    },
+    {
+        "id": "874bf5798ef82554",
+        "type": "switch",
+        "z": "66fb07a542280215",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 100,
+        "wires": [
+            [
+                "740c02c.43f2e4"
             ]
         ]
     }

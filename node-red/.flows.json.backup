@@ -51,7 +51,7 @@
         "active": true,
         "console": "false",
         "complete": "payload",
-        "x": 680,
+        "x": 600,
         "y": 100,
         "wires": []
     },
