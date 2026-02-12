@@ -1,0 +1,33 @@
+[
+    {
+        "id": "1",
+        "type": "inject",
+        "z": "flow1",
+        "name": "Hello",
+        "props": [],
+        "repeat": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hello from GitOps 🚀",
+        "payloadType": "str",
+        "x": 100,
+        "y": 100,
+        "wires": [["2"]]
+    },
+    {
+        "id": "2",
+        "type": "debug",
+        "z": "flow1",
+        "name": "Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 300,
+        "y": 100,
+        "wires": []
+    }
+]
