@@ -15,9 +15,15 @@
             },
             "tours": {
                 "welcome": "4.1.5"
+            },
+            "dialog": {
+                "export": {
+                    "pretty": true
+                }
             }
         },
         "menu-deploymenu-item-node": true,
-        "menu-deploymenu-item-full": false
+        "menu-deploymenu-item-full": false,
+        "menu-menu-item-sidebar": false
     }
 }
