@@ -8,14 +8,6 @@
         "env": []
     },
     {
-        "id": "63a60bad283dd1a1",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "281e05d.f5f5904",
         "type": "inject",
         "z": "66fb07a542280215",
@@ -214,7 +206,6 @@
         "y": 420,
         "wires": [
             [
-                "3f992f89ec0a57f9",
                 "61e9983d025b110f"
             ]
         ]
@@ -233,7 +224,20 @@
         "x": 300,
         "y": 580,
         "wires": [
-            []
+            [
+                "6c5177960fe831bf"
+            ]
         ]
+    },
+    {
+        "id": "6c5177960fe831bf",
+        "type": "link out",
+        "z": "66fb07a542280215",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [],
+        "x": 425,
+        "y": 520,
+        "wires": []
     }
 ]
