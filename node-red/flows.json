@@ -1,33 +1,221 @@
 [
     {
-        "id": "1",
-        "type": "inject",
-        "z": "flow1",
-        "name": "Hello",
-        "props": [],
-        "repeat": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Hello from GitOps 🚀",
-        "payloadType": "str",
-        "x": 100,
-        "y": 100,
-        "wires": [["2"]]
+        "id": "66fb07a542280215",
+        "type": "tab",
+        "label": "Recovered Nodes",
+        "disabled": false,
+        "info": "The nodes on this flow were missing a valid flow id when they were imported. They have been added to this flow so you can either restore or delete them.",
+        "env": []
     },
     {
-        "id": "2",
+        "id": "63a60bad283dd1a1",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "281e05d.f5f5904",
+        "type": "inject",
+        "z": "66fb07a542280215",
+        "name": "Trigger",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [
+                "87c6f05e.1c7b8"
+            ]
+        ]
+    },
+    {
+        "id": "87c6f05e.1c7b8",
+        "type": "function",
+        "z": "66fb07a542280215",
+        "name": "Hello World Function",
+        "func": "// Set the message payload to 'Hello World!'\nmsg.payload = \"Hello World!\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 100,
+        "wires": [
+            [
+                "740c02c.43f2e4"
+            ]
+        ]
+    },
+    {
+        "id": "740c02c.43f2e4",
         "type": "debug",
-        "z": "flow1",
-        "name": "Debug",
+        "z": "66fb07a542280215",
+        "name": "Debug Output",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 480,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "39d865147f293479",
+        "type": "inject",
+        "z": "66fb07a542280215",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "4a7c720d89dcb895"
+            ]
+        ]
+    },
+    {
+        "id": "4a7c720d89dcb895",
+        "type": "function",
+        "z": "66fb07a542280215",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "a92611c53234860c"
+            ]
+        ]
+    },
+    {
+        "id": "a92611c53234860c",
+        "type": "debug",
+        "z": "66fb07a542280215",
+        "name": "debug 1",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 300,
-        "y": 100,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 260,
         "wires": []
+    },
+    {
+        "id": "fdd5f0fc764c4b72",
+        "type": "inject",
+        "z": "66fb07a542280215",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 380,
+        "wires": [
+            [
+                "eb0474a92f0a0763"
+            ]
+        ]
+    },
+    {
+        "id": "eb0474a92f0a0763",
+        "type": "function",
+        "z": "66fb07a542280215",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 380,
+        "wires": [
+            [
+                "8466c197cd6e221c"
+            ]
+        ]
+    },
+    {
+        "id": "3f992f89ec0a57f9",
+        "type": "debug",
+        "z": "66fb07a542280215",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "8466c197cd6e221c",
+        "type": "switch",
+        "z": "66fb07a542280215",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 420,
+        "wires": [
+            [
+                "3f992f89ec0a57f9"
+            ]
+        ]
     }
 ]
