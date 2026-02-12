@@ -16,6 +16,8 @@
             "tours": {
                 "welcome": "4.1.5"
             }
-        }
+        },
+        "menu-deploymenu-item-node": true,
+        "menu-deploymenu-item-full": false
     }
 }
