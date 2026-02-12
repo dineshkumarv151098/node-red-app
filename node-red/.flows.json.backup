@@ -2,7 +2,7 @@
     {
         "id": "66fb07a542280215",
         "type": "tab",
-        "label": "Recovered Nodes",
+        "label": "new flow",
         "disabled": false,
         "info": "The nodes on this flow were missing a valid flow id when they were imported. They have been added to this flow so you can either restore or delete them.",
         "env": []
