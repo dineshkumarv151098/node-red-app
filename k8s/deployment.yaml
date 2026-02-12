@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: node-red
-          image: dkv6/nodered:fb795f7
+          image: dkv6/nodered:9625e0d
           imagePullPolicy: Always
           ports:
             - containerPort: 1880
