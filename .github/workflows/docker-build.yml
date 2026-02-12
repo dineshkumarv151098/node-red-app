@@ -17,8 +17,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/node-red:latest ./node-red
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/nodered:latest ./node-red
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/node-red:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/nodered:latest
