@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "63a60bad283dd1a1",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "281e05d.f5f5904",
         "type": "inject",
         "z": "66fb07a542280215",
@@ -206,19 +214,26 @@
         "y": 420,
         "wires": [
             [
-                "f5f0216e5618286c"
+                "3f992f89ec0a57f9",
+                "61e9983d025b110f"
             ]
         ]
     },
     {
-        "id": "f5f0216e5618286c",
-        "type": "link out",
+        "id": "61e9983d025b110f",
+        "type": "template",
         "z": "66fb07a542280215",
-        "name": "link out 1",
-        "mode": "link",
-        "links": [],
-        "x": 475,
-        "y": 440,
-        "wires": []
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 300,
+        "y": 580,
+        "wires": [
+            []
+        ]
     }
 ]
