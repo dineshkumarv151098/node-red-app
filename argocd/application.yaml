@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/dineshkumarv151098/node-red-gitops-app
+    repoURL: https://github.com/dineshkumarv151098/node-red-app
     targetRevision: main
     path: k8s
   destination:
