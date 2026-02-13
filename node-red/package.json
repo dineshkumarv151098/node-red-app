@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/dineshkumarv151098/node-red-app/issues"
   },
-  "homepage": "https://github.com/dineshkumarv151098/node-red-app#readme"
+  "homepage": "https://github.com/dineshkumarv151098/node-red-app#readme",
+  "dependencies": {
+    "@flowfuse/node-red-dashboard": "~1.30.2"
+  }
 }
