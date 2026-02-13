@@ -1,16 +1,18 @@
 FROM nodered/node-red:latest
 
-# Switch to root
 USER root
 
-# Copy package.json first
-COPY package.json /data/package.json
+# Set working directory explicitly
+WORKDIR /data
 
-# Install dependencies
+# Copy only package files first
+COPY package.json package-lock.json* ./
+
+# Install dependencies into /data/node_modules
 RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
 
 # Copy flows
-COPY flows.json /data/flows.json
+COPY flows.json flows_cred.json* ./
 
 USER node-red
 
